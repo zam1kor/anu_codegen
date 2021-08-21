@@ -1,0 +1,55 @@
+«IMPORT metamodel»
+
+«EXTENSION  input::templates::GeneratorExtensions»
+
+«DEFINE main FOR Model»
+
+ 
+	
+	«FOREACH entities() AS entity»
+	
+	content of Entity: «entity»
+	
+	«EXPAND textOutput FOR entity»
+	
+	«ENDFOREACH»
+	
+
+«ENDDEFINE»
+
+
+«DEFINE textOutput FOR Entity»
+    «FILE name+".txt"»
+            «FOREACH features AS f»
+                «f.type.name» :: «f.name»
+                
+            «ENDFOREACH»
+    «ENDFILE»
+«ENDDEFINE»
+
+
+«DEFINE javaClass FOR Entity»
+    «FILE name+".java"»
+        public class «name» {
+            «FOREACH features AS f»
+            «ENDFOREACH»
+        }
+    «ENDFILE»
+«ENDDEFINE»
+
+
+«DEFINE featureData FOR Feature»
+
+//hello this is the data of Feature
+
+    private «this.type.name» «this.name»;
+                
+                public void «this.setter()»(«this.type.name» «this.name») {
+                    this.«this.name» = «this.name»;
+                }
+                
+                public «this.type.name» «this.getter()»() {
+                    return «this.name»;
+                }
+                
+«ENDDEFINE»

@@ -1,0 +1,9 @@
+package com.bosch.codegen.test
+
+class CodeGen {
+	
+	def main(Object obj)'''
+	
+	
+	'''
+}

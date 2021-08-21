@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metamodel:Model xmlns:metamodel="http://www.example.org/metamodel">
+  <classesList name="Eng"/>
+  <namespaces name="com.anc"/>
+</metamodel:Model>

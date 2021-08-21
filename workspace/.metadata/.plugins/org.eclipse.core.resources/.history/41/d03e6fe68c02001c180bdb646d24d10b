@@ -1,0 +1,43 @@
+package com.bosch.codegen.test
+
+import metamodel.Model
+
+class CodeGen {
+	
+	def writeSingeTestFile(Object obj, String outputDirectory){
+		
+	}
+	
+	
+	def writeMultipleTestFile(Object obj, String outputDirectory){
+		
+	}
+	
+	
+	def main(Object obj)'''
+	
+	«IF obj instanceof Model»
+	
+	«FOR  classObj: (obj as Model).classesList»
+	Name of the class is:	«classObj.name»
+	
+	/************ GLOBAL VARIABLE DETAILS **************/
+		«FOR globalVariable : classObj.globalVariableDefs»
+			Gloabl variable : «globalVariable.name»
+		«ENDFOR»	
+		
+	/********** MEMBER FUNCTION DETAILS *******************/
+		«FOR memberFunction : classObj.memberFunctions»
+				Function : «memberFunction.name»
+			«ENDFOR»	
+		
+	
+	
+	
+	
+	«ENDFOR »
+	
+	«ENDIF»
+	
+	'''
+}

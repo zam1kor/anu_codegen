@@ -1,0 +1,86 @@
+/**
+ */
+package metamodel;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Class Element</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link metamodel.ClassElement#getNamespaces <em>Namespaces</em>}</li>
+ *   <li>{@link metamodel.ClassElement#getGlobalVariables <em>Global Variables</em>}</li>
+ *   <li>{@link metamodel.ClassElement#getName <em>Name</em>}</li>
+ * </ul>
+ *
+ * @see metamodel.MetamodelPackage#getClassElement()
+ * @model
+ * @generated
+ */
+public interface ClassElement extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Namespaces</b></em>' containment reference list.
+	 * The list contents are of type {@link metamodel.Namespace}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Namespaces</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Namespaces</em>' containment reference list.
+	 * @see metamodel.MetamodelPackage#getClassElement_Namespaces()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Namespace> getNamespaces();
+
+	/**
+	 * Returns the value of the '<em><b>Global Variables</b></em>' containment reference list.
+	 * The list contents are of type {@link metamodel.GlobalVariable}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Global Variables</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Global Variables</em>' containment reference list.
+	 * @see metamodel.MetamodelPackage#getClassElement_GlobalVariables()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<GlobalVariable> getGlobalVariables();
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see metamodel.MetamodelPackage#getClassElement_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link metamodel.ClassElement#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
+} // ClassElement

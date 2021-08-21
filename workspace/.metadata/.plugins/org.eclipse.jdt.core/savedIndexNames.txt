@@ -1,0 +1,18 @@
+INDEX VERSION 1.131+D:\work_latest\anu_code_gen\workspace\.metadata\.plugins\org.eclipse.jdt.core
+1089495122.index
+2854346440.index
+3360099926.index
+3710282681.index
+4073231554.index
+4059893046.index
+318972888.index
+178666606.index
+4103845783.index
+226153410.index
+262893274.index
+1398692217.index
+1954747821.index
+3322521403.index
+1036450686.index
+1524506437.index
+2607877250.index

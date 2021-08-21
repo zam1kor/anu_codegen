@@ -1,0 +1,51 @@
+package com.bosch.codegen.test
+
+import metamodel.ClassElement
+import metamodel.Model
+import java.io.BufferedWriter
+import java.io.FileWriter
+import java.io.File
+
+class CodeGen {
+	
+	def writeSingeTestFile(Object obj, String outputDirectory){
+		val BufferedWriter bw=new BufferedWriter(new FileWriter(new File(outputDirectory+File.pathSeparator+"cpp.test")));
+		
+		bw.write(main(obj).toString);
+	}
+	
+	
+	def writeMultipleTestFile(Object obj, String outputDirectory){
+		
+	}
+	
+	
+	def main(Object obj)'''
+	
+	«IF obj instanceof Model»
+	
+	«FOR  classObj: (obj as Model).classesList»
+	
+		«generateClassContent(classObj)»	
+	
+	«ENDFOR »
+	
+	«ENDIF»
+	
+	'''
+	
+	protected def CharSequence generateClassContent(ClassElement classObj)
+		'''
+		Name of the class is:	«classObj.name»
+		
+		/************ GLOBAL VARIABLE DETAILS **************/
+			«FOR globalVariable : classObj.globalVariableDefs»
+				Gloabl variable : «globalVariable.name»
+			«ENDFOR»	
+			
+		/********** MEMBER FUNCTION DETAILS *******************/
+			«FOR memberFunction : classObj.memberFunctions»
+				Function : «memberFunction.name»
+		«ENDFOR»'''
+	
+}

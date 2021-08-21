@@ -1,0 +1,12 @@
+
+«IMPORT metamodel»
+
+«EXTENSION  input::templates::GeneratorExtensions»
+
+«AROUND *::featureData FOR Feature»
+
+//Customer is trying to customize the data...
+
+«targetDef.proceed()»
+ 				
+«ENDAROUND»

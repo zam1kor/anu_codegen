@@ -1,0 +1,18 @@
+package com.bosch.codegen.test
+
+import metamodel.Model
+
+class CodeGen {
+	
+	def main(Object obj)'''
+	
+	«IF obj instanceof Model»
+	
+	«FOR  type: (obj as Model).types»
+		
+	«ENDFOR »
+	
+	«ENDIF»
+	
+	'''
+}

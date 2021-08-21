@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.bosch.oaw5.basic.example2/src" modelPluginID="com.bosch.oaw5.basic.example2"
+    modelName="Metamodel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>metamodel.ecore</foreignModel>
+  <genPackages prefix="Metamodel" disposableProviderFactory="true" fileExtensions="cppmodel"
+      ecorePackage="metamodel.ecore#/">
+    <genClasses ecoreClass="metamodel.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference metamodel.ecore#//Model/classesList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference metamodel.ecore#//Model/namespaces"/>
+    </genClasses>
+    <genClasses ecoreClass="metamodel.ecore#//Namespace">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metamodel.ecore#//Namespace/name"/>
+    </genClasses>
+    <genClasses ecoreClass="metamodel.ecore#//GlobalVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metamodel.ecore#//GlobalVariable/name"/>
+    </genClasses>
+    <genClasses ecoreClass="metamodel.ecore#//MemberFunction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metamodel.ecore#//MemberFunction/name"/>
+    </genClasses>
+    <genClasses ecoreClass="metamodel.ecore#//ClassElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference metamodel.ecore#//ClassElement/namespaces"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference metamodel.ecore#//ClassElement/globalVariables"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metamodel.ecore#//ClassElement/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

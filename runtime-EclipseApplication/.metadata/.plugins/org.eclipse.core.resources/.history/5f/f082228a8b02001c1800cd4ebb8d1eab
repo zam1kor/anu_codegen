@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metamodel:Model xmlns:metamodel="http://www.example.org/metamodel">
+  <classesList namespaceRefs="//@namespaces.0" name="c1">
+    <globalVariableDefs name="G1"/>
+    <memberFunctions name="f1">
+      <localVariables name="l1"/>
+    </memberFunctions>
+  </classesList>
+  <namespaces name="ns1"/>
+</metamodel:Model>

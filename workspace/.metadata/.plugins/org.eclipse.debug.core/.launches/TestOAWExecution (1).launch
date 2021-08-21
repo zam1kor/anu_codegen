@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/com.bosch.oaw5.basic.example2/src/com/bosch/codegen/test/TestOAWExecution.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.bosch.codegen.test.TestOAWExecution"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="D:\work_latest\anu_code_gen\application\input\test.cppmodel D:\work_latest\anu_code_gen\application\output true"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.bosch.oaw5.basic.example2"/>
+</launchConfiguration>

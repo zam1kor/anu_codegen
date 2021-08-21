@@ -1,0 +1,22 @@
+package com.bosch.codegen.test
+
+import metamodel.Model
+
+class CodeGen {
+	
+	def main(Object obj)'''
+	
+	«IF obj instanceof Model»
+	
+	«FOR  classObj: (obj as Model).classesList»
+	Name of the class is:	«classObj.name»
+	
+		«FOR globalVariable : classObj.globalVariableDefs»
+			Gloabl variable : «globalVariable.name»
+		«ENDFOR»	
+	«ENDFOR »
+	
+	«ENDIF»
+	
+	'''
+}
