@@ -2,23 +2,14 @@
 <metamodel:Model xmlns:metamodel="http://www.example.org/metamodel">
   <classesList namespaceRefs="//@namespaces.0" name="c1">
     <globalVariableDefs name="G1"/>
-    <memberFunctions name="f1">
+    <memberFunctions name="f1" returnType="bool">
       <localVariables name="l1"/>
+      <localVariables name="var"/>
+      <parameters name="var" type="int"/>
     </memberFunctions>
     <memberFunctions name="f2">
       <localVariables name="l2"/>
     </memberFunctions>
   </classesList>
-  
-    <classesList namespaceRefs="//@namespaces.0" name="c2">
-    <globalVariableDefs name="G1"/>
-    <memberFunctions name="f1">
-      <localVariables name="l1"/>
-    </memberFunctions>
-    <memberFunctions name="f2">
-      <localVariables name="l2"/>
-    </memberFunctions>
-  </classesList>
-  
   <namespaces name="ns1"/>
 </metamodel:Model>

@@ -1,0 +1,12 @@
+#include "gtest/gtest.h"
+#include "simplemath.h"
+
+TEST(testFoo, myFooTest1)
+{
+    EXPECT_EQ(true, foo());	
+}
+
+TEST(testBar, myBarTest1)
+{
+    EXPECT_EQ(2, bar());	
+}

@@ -16,6 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link metamodel.MemberFunction#getName <em>Name</em>}</li>
  *   <li>{@link metamodel.MemberFunction#getLocalVariables <em>Local Variables</em>}</li>
+ *   <li>{@link metamodel.MemberFunction#getReturnType <em>Return Type</em>}</li>
+ *   <li>{@link metamodel.MemberFunction#getParameters <em>Parameters</em>}</li>
  * </ul>
  *
  * @see metamodel.MetamodelPackage#getMemberFunction()
@@ -64,5 +66,47 @@ public interface MemberFunction extends EObject {
 	 * @generated
 	 */
 	EList<LocalVariable> getLocalVariables();
+
+	/**
+	 * Returns the value of the '<em><b>Return Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Return Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Return Type</em>' attribute.
+	 * @see #setReturnType(String)
+	 * @see metamodel.MetamodelPackage#getMemberFunction_ReturnType()
+	 * @model
+	 * @generated
+	 */
+	String getReturnType();
+
+	/**
+	 * Sets the value of the '{@link metamodel.MemberFunction#getReturnType <em>Return Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Return Type</em>' attribute.
+	 * @see #getReturnType()
+	 * @generated
+	 */
+	void setReturnType(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Parameters</b></em>' containment reference list.
+	 * The list contents are of type {@link metamodel.Parameter}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Parameters</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Parameters</em>' containment reference list.
+	 * @see metamodel.MetamodelPackage#getMemberFunction_Parameters()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Parameter> getParameters();
 
 } // MemberFunction

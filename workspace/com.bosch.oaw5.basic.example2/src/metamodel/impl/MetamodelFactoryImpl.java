@@ -62,6 +62,7 @@ public class MetamodelFactoryImpl extends EFactoryImpl implements MetamodelFacto
 			case MetamodelPackage.MEMBER_FUNCTION: return createMemberFunction();
 			case MetamodelPackage.CLASS_ELEMENT: return createClassElement();
 			case MetamodelPackage.LOCAL_VARIABLE: return createLocalVariable();
+			case MetamodelPackage.PARAMETER: return createParameter();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -125,6 +126,16 @@ public class MetamodelFactoryImpl extends EFactoryImpl implements MetamodelFacto
 	public LocalVariable createLocalVariable() {
 		LocalVariableImpl localVariable = new LocalVariableImpl();
 		return localVariable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Parameter createParameter() {
+		ParameterImpl parameter = new ParameterImpl();
+		return parameter;
 	}
 
 	/**

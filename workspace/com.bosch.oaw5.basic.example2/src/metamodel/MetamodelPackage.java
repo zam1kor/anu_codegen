@@ -205,13 +205,31 @@ public interface MetamodelPackage extends EPackage {
 	int MEMBER_FUNCTION__LOCAL_VARIABLES = 1;
 
 	/**
+	 * The feature id for the '<em><b>Return Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEMBER_FUNCTION__RETURN_TYPE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEMBER_FUNCTION__PARAMETERS = 3;
+
+	/**
 	 * The number of structural features of the '<em>Member Function</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEMBER_FUNCTION_FEATURE_COUNT = 2;
+	int MEMBER_FUNCTION_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Member Function</em>' class.
@@ -326,6 +344,53 @@ public interface MetamodelPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link metamodel.impl.ParameterImpl <em>Parameter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see metamodel.impl.ParameterImpl
+	 * @see metamodel.impl.MetamodelPackageImpl#getParameter()
+	 * @generated
+	 */
+	int PARAMETER = 6;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__TYPE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Parameter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Parameter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_OPERATION_COUNT = 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link metamodel.Model <em>Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -432,6 +497,28 @@ public interface MetamodelPackage extends EPackage {
 	EReference getMemberFunction_LocalVariables();
 
 	/**
+	 * Returns the meta object for the attribute '{@link metamodel.MemberFunction#getReturnType <em>Return Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Return Type</em>'.
+	 * @see metamodel.MemberFunction#getReturnType()
+	 * @see #getMemberFunction()
+	 * @generated
+	 */
+	EAttribute getMemberFunction_ReturnType();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link metamodel.MemberFunction#getParameters <em>Parameters</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Parameters</em>'.
+	 * @see metamodel.MemberFunction#getParameters()
+	 * @see #getMemberFunction()
+	 * @generated
+	 */
+	EReference getMemberFunction_Parameters();
+
+	/**
 	 * Returns the meta object for class '{@link metamodel.ClassElement <em>Class Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -505,6 +592,38 @@ public interface MetamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getLocalVariable_Name();
+
+	/**
+	 * Returns the meta object for class '{@link metamodel.Parameter <em>Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Parameter</em>'.
+	 * @see metamodel.Parameter
+	 * @generated
+	 */
+	EClass getParameter();
+
+	/**
+	 * Returns the meta object for the attribute '{@link metamodel.Parameter#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see metamodel.Parameter#getName()
+	 * @see #getParameter()
+	 * @generated
+	 */
+	EAttribute getParameter_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link metamodel.Parameter#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see metamodel.Parameter#getType()
+	 * @see #getParameter()
+	 * @generated
+	 */
+	EAttribute getParameter_Type();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -618,6 +737,22 @@ public interface MetamodelPackage extends EPackage {
 		EReference MEMBER_FUNCTION__LOCAL_VARIABLES = eINSTANCE.getMemberFunction_LocalVariables();
 
 		/**
+		 * The meta object literal for the '<em><b>Return Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEMBER_FUNCTION__RETURN_TYPE = eINSTANCE.getMemberFunction_ReturnType();
+
+		/**
+		 * The meta object literal for the '<em><b>Parameters</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MEMBER_FUNCTION__PARAMETERS = eINSTANCE.getMemberFunction_Parameters();
+
+		/**
 		 * The meta object literal for the '{@link metamodel.impl.ClassElementImpl <em>Class Element</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -676,6 +811,32 @@ public interface MetamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute LOCAL_VARIABLE__NAME = eINSTANCE.getLocalVariable_Name();
+
+		/**
+		 * The meta object literal for the '{@link metamodel.impl.ParameterImpl <em>Parameter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see metamodel.impl.ParameterImpl
+		 * @see metamodel.impl.MetamodelPackageImpl#getParameter()
+		 * @generated
+		 */
+		EClass PARAMETER = eINSTANCE.getParameter();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PARAMETER__NAME = eINSTANCE.getParameter_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PARAMETER__TYPE = eINSTANCE.getParameter_Type();
 
 	}
 

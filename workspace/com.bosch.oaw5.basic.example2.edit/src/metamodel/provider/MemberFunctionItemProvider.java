@@ -63,6 +63,7 @@ public class MemberFunctionItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addReturnTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -90,6 +91,28 @@ public class MemberFunctionItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Return Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addReturnTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MemberFunction_returnType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MemberFunction_returnType_feature", "_UI_MemberFunction_type"),
+				 MetamodelPackage.Literals.MEMBER_FUNCTION__RETURN_TYPE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -102,6 +125,7 @@ public class MemberFunctionItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(MetamodelPackage.Literals.MEMBER_FUNCTION__LOCAL_VARIABLES);
+			childrenFeatures.add(MetamodelPackage.Literals.MEMBER_FUNCTION__PARAMETERS);
 		}
 		return childrenFeatures;
 	}
@@ -158,9 +182,11 @@ public class MemberFunctionItemProvider
 
 		switch (notification.getFeatureID(MemberFunction.class)) {
 			case MetamodelPackage.MEMBER_FUNCTION__NAME:
+			case MetamodelPackage.MEMBER_FUNCTION__RETURN_TYPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case MetamodelPackage.MEMBER_FUNCTION__LOCAL_VARIABLES:
+			case MetamodelPackage.MEMBER_FUNCTION__PARAMETERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -182,6 +208,11 @@ public class MemberFunctionItemProvider
 			(createChildParameter
 				(MetamodelPackage.Literals.MEMBER_FUNCTION__LOCAL_VARIABLES,
 				 MetamodelFactory.eINSTANCE.createLocalVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MetamodelPackage.Literals.MEMBER_FUNCTION__PARAMETERS,
+				 MetamodelFactory.eINSTANCE.createParameter()));
 	}
 
 	/**
